@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import {
@@ -12,6 +12,7 @@ import {
   Bookmark,
   LayoutDashboard,
   ChevronDown,
+  Megaphone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -177,7 +178,7 @@ export function Header({ onSearch, onNavigate }: HeaderProps) {
                   >
                     <span className="text-base">{l.flag}</span>
                     <span className="flex-1">{l.nativeName}</span>
-                    {locale === l.code && <span className="text-primary">●</span>}
+                    {locale === l.code && <span className="text-primary">â—</span>}
                   </DropdownMenuItem>
                 ))}
                 <DropdownMenuSeparator />

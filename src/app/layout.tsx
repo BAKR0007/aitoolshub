@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AIToolsHub — Discover the Best AI Tools, Curated & Ranked",
+  title: "AIToolsHub â€” Discover the Best AI Tools, Curated & Ranked",
   description:
     "Explore 100,000+ AI tools across 50+ categories. Compare features, read verified reviews, and find the perfect AI solution for your workflow. Trusted by 2M+ creators worldwide.",
   keywords: [
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "AIToolsHub Team" }],
   openGraph: {
-    title: "AIToolsHub — Discover the Best AI Tools",
+    title: "AIToolsHub â€” Discover the Best AI Tools",
     description: "Explore 100,000+ AI tools across 50+ categories. Compare, review, and find your perfect AI stack.",
     siteName: "AIToolsHub",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AIToolsHub — Discover the Best AI Tools",
+    title: "AIToolsHub â€” Discover the Best AI Tools",
     description: "Explore 100,000+ AI tools across 50+ categories.",
   },
   alternates: {
