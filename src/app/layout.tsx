@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bakrr.net'),
   title: "AIToolsHub â€” Discover the Best AI Tools, Curated & Ranked",
   description:
     "Explore 100,000+ AI tools across 50+ categories. Compare features, read verified reviews, and find the perfect AI solution for your workflow. Trusted by 2M+ creators worldwide.",
@@ -46,14 +47,18 @@ export const metadata: Metadata = {
     description: "Explore 100,000+ AI tools across 50+ categories.",
   },
   alternates: {
-    canonical: "/",
+    canonical: '/',
     languages: {
-      en: "/",
-      ar: "/ar",
-      es: "/es",
-      zh: "/zh",
-      hi: "/hi",
+      en: '/',
+      ar: '/ar',
+      es: '/es',
+      zh: '/zh',
+      hi: '/hi',
     },
+  },
+  verification: {
+    google: 'YOUR_GSC_CODE_HERE',
+  },
   },
 };
 

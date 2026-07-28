@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -144,7 +144,7 @@ export function ToolDialog({ tool, open, onOpenChange, onViewTool }: ToolDialogP
             {/* Action bar */}
             <div className="flex flex-wrap items-center gap-2 mb-6">
               <Button asChild size="sm">
-                <a href={tool.websiteUrl} target="_blank" rel="noopener noreferrer">
+                <a href={tool.affiliateUrl || tool.websiteUrl} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4 mr-1.5" />
                   {t("common.visit")}
                 </a>
@@ -181,7 +181,7 @@ export function ToolDialog({ tool, open, onOpenChange, onViewTool }: ToolDialogP
               </div>
               <div className="rounded-lg border bg-card p-3">
                 <div className="text-xs text-muted-foreground mb-1">{t("compare.category")}</div>
-                <div className="font-semibold text-sm truncate">{category?.name ?? "—"}</div>
+                <div className="font-semibold text-sm truncate">{category?.name ?? "â€”"}</div>
               </div>
               <div className="rounded-lg border bg-card p-3">
                 <div className="text-xs text-muted-foreground mb-1">Views</div>
