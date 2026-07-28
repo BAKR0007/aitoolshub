@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/lib/theme";
 import { I18nProvider } from "@/lib/i18n";
+import { Analytics } from "@/components/shared/analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -89,6 +90,7 @@ export default function RootLayout({
             {children}
             <Toaster />
             <SonnerToaster position="top-right" richColors />
+                      <Analytics gaId={process.env.NEXT_PUBLIC_GA_ID} clarityId={process.env.NEXT_PUBLIC_CLARITY_ID} gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
           </I18nProvider>
         </ThemeProvider>
       </body>
