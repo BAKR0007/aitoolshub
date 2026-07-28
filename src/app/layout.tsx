@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://bakrr.net'),
-  title: "AIToolsHub â€” Discover the Best AI Tools, Curated & Ranked",
+  metadataBase: new URL("https://bakrr.net"),
+  title: "AIToolsHub — Discover the Best AI Tools, Curated & Ranked",
   description:
     "Explore 100,000+ AI tools across 50+ categories. Compare features, read verified reviews, and find the perfect AI solution for your workflow. Trusted by 2M+ creators worldwide.",
   keywords: [
@@ -36,28 +36,28 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "AIToolsHub Team" }],
   openGraph: {
-    title: "AIToolsHub â€” Discover the Best AI Tools",
+    title: "AIToolsHub — Discover the Best AI Tools",
     description: "Explore 100,000+ AI tools across 50+ categories. Compare, review, and find your perfect AI stack.",
     siteName: "AIToolsHub",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AIToolsHub â€” Discover the Best AI Tools",
+    title: "AIToolsHub — Discover the Best AI Tools",
     description: "Explore 100,000+ AI tools across 50+ categories.",
   },
   alternates: {
-    canonical: '/',
+    canonical: "/",
     languages: {
-      en: '/',
-      ar: '/ar',
-      es: '/es',
-      zh: '/zh',
-      hi: '/hi',
+      en: "/",
+      ar: "/ar",
+      es: "/es",
+      zh: "/zh",
+      hi: "/hi",
     },
   },
   verification: {
-    google: '7EJIJUoVjF2l7P2afpDJhhpsQRTy7E1_8rpxcQ8ANac',
+    google: "7EJIJUoVjF2l7P2afpDJhhpsQRTy7E1_8rpxcQ8ANac",
   },
 };
 
@@ -66,6 +66,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID;
+  const MS_CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -94,7 +98,7 @@ export default function RootLayout({
             {children}
             <Toaster />
             <SonnerToaster position="top-right" richColors />
-                      <Analytics gaId={process.env.NEXT_PUBLIC_GA_ID} clarityId={process.env.NEXT_PUBLIC_CLARITY_ID} gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+            <Analytics gaId={GA_MEASUREMENT_ID} clarityId={MS_CLARITY_ID} gtmId={GTM_ID} />
           </I18nProvider>
         </ThemeProvider>
       </body>
