@@ -1,4 +1,6 @@
-﻿import type { Metadata } from "next";
+﻿"use client";
+
+import type { Metadata } from "next";
 import { Megaphone, Check, Star, TrendingUp, Mail, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
