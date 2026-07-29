@@ -1,6 +1,5 @@
 ﻿"use client";
 
-import type { Metadata } from "next";
 import { Megaphone, Check, Star, TrendingUp, Mail, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -9,10 +8,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-export const metadata: Metadata = {
-  title: "Promote Your AI Tool - AIToolsHub",
-  description: "Get your AI tool in front of 2M+ monthly users.",
-};
 
 export default function AdvertisePage() {
   const stats = [
