@@ -453,6 +453,7 @@ export type PricingTier = {
   features: string[];
   isPopular: boolean;
   cta: string;
+  stripe: string;
   highlight?: boolean;
 };
 
@@ -465,6 +466,7 @@ export const PLATFORM_PRICING_TIERS: PricingTier[] = [
     features: ["Browse 100K+ AI tools", "Basic search & filters", "Save up to 25 bookmarks", "1 public collection", "Community access", "Weekly newsletter"],
     isPopular: false,
     cta: "Get Started Free",
+    stripe: "https://buy.stripe.com/fZu14m4Pe3QH8KkgwC6Zy0m",
   },
   {
     name: "Pro",
@@ -474,6 +476,7 @@ export const PLATFORM_PRICING_TIERS: PricingTier[] = [
     features: ["Everything in Free", "Unlimited bookmarks & collections", "Advanced AI search", "Tool comparison (up to 5)", "Personal AI recommendations", "Early access to new tools", "Priority support", "No ads"],
     isPopular: true,
     cta: "Start Pro Trial",
+    stripe: "https://buy.stripe.com/5kQ00i81qbj97Gg1BI6Zy0n",
     highlight: true,
   },
   {
@@ -484,6 +487,7 @@ export const PLATFORM_PRICING_TIERS: PricingTier[] = [
     features: ["Everything in Pro", "Up to 10 team members", "Shared collections", "Team analytics dashboard", "API access (10K calls/mo)", "Custom collections", "SSO authentication", "Dedicated support"],
     isPopular: false,
     cta: "Start Business Trial",
+    stripe: "https://buy.stripe.com/6oUfZgftS5YP7Ggbci6Zy0o",
   },
   {
     name: "Enterprise",
@@ -493,6 +497,7 @@ export const PLATFORM_PRICING_TIERS: PricingTier[] = [
     features: ["Everything in Business", "Unlimited team members", "White-label branding", "Custom integrations", "Dedicated account manager", "99.9% SLA", "On-premise deployment", "Custom AI models"],
     isPopular: false,
     cta: "Contact Sales",
+    stripe: "https://buy.stripe.com/aFafZg1D29b15y8gwC6Zy0p",
   },
 ];
 

@@ -37,7 +37,6 @@ export function PricingSection({ onNavigate }: PricingSectionProps) {
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">{t("pricing.subtitle")}</p>
 
-          {/* Billing toggle */}
           <div className="inline-flex items-center gap-1 p-1 rounded-full border bg-card">
             <button
               onClick={() => setBilling("monthly")}
@@ -86,7 +85,7 @@ export function PricingSection({ onNavigate }: PricingSectionProps) {
                 >
                   {tier.isPopular && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <Badge className="px-3 py-1 shadow-md">
+                      <Badge className="px-3 py-1">
                         <Sparkles className="w-3 h-3 mr-1" />
                         {t("pricing.popular")}
                       </Badge>
@@ -124,7 +123,7 @@ export function PricingSection({ onNavigate }: PricingSectionProps) {
                   <Button
                     variant={tier.highlight ? "default" : "outline"}
                     className="w-full mb-5"
-                    onClick={() => onNavigate?.("user-dashboard")}
+                    onClick={() => { window.location.href = tier.stripe; }}
                   >
                     {tier.cta}
                   </Button>
@@ -143,7 +142,6 @@ export function PricingSection({ onNavigate }: PricingSectionProps) {
           })}
         </div>
 
-        {/* Payment providers */}
         <div className="mt-12 text-center">
           <p className="text-xs text-muted-foreground mb-4 uppercase tracking-wider">
             Supported payment providers
